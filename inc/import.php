@@ -119,7 +119,7 @@ function ozh_ta_insert_tweets( $tweets, $display = false ) {
 		// Current tweet
 		$tid    = (string)$tweet->id;
 		$text   = $tweet->text;
-		$date   = date( 'Y-m-d H:i:s', strtotime( $tweet->created_at ) );
+		$date   = date( 'Y-m-d H:i:s T', strtotime( $tweet->created_at ) );
 		$source = $tweet->source;
 		$reply_to_name  = $tweet->in_reply_to_screen_name;
 		$reply_to_tweet = (string)$tweet->in_reply_to_status_id;
